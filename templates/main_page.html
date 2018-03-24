@@ -33,9 +33,17 @@
 
         <div class="row">
             Come back soon for better things!
+            <p>In the meantime, this page is a sticky note.</p>
         </div>
 
         <div>
+            {% for comment in comments %}
+                <div class="row">
+                    comment awaiting moderation
+                    <!--{{ comment }}-->
+                </div>
+            {% endfor %}
+
             <form action="." method="POST">
                 <textarea name="contents" class="form-control" placeholder="Enter a comment"></textarea>
                 <input type="submit" class="btn btn-success" value="Post comment">
